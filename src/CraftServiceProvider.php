@@ -64,7 +64,9 @@ class CraftServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../config/craft.php' => config_path('craft.php'),
         ], 'craft.config');
-
+        $this->publishes([
+            __DIR__.'/../stubs' => base_path('stubs'),
+        ], 'craft.stubs');
         // Publishing the views.
         /*$this->publishes([
             __DIR__.'/../resources/views' => base_path('resources/views/vendor/ibis117'),

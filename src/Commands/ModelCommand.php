@@ -69,7 +69,7 @@ class ModelCommand extends Command
 
     private function getStub()
     {
-        $path = __DIR__ . '/../../stubs/model.stub';
+        $path = $this->files->exists(base_path('stubs/model.stub')) ? base_path('stubs/model.stub') : __DIR__ . '/../../stubs/model.stub';
         return $this->files->get($path);
     }
 

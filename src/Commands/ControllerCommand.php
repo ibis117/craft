@@ -78,7 +78,7 @@ class ControllerCommand extends Command
 
     private function getStub()
     {
-        $path = __DIR__ . '/../../stubs/controller.stub';
+        $path = $this->files->exists(base_path('stubs/controller.stub')) ? base_path('stubs/controller.stub') : __DIR__ . '/../../stubs/controller.stub';
         return $this->files->get($path);
     }
 

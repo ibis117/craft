@@ -78,7 +78,7 @@ class ViewCommand extends Command
 
     private function getStub()
     {
-        $path = __DIR__ . '/../../stubs/view.stub';
+        $path = $this->files->exists(base_path('stubs/view.stub')) ? base_path('stubs/view.stub') : __DIR__ . '/../../stubs/view.stub';
         return $this->files->get($path);
     }
 
