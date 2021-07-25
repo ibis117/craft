@@ -74,7 +74,7 @@ class ModelCommand extends Command
     }
 
     private function getPath($class) {
-        $folder = config('craft.controller.folder');
+        $folder = config('craft.model.folder');
         $structure = array_filter(['app/Models', $folder, $class.'.php'], function($value) {
             return $value != '';
         });
